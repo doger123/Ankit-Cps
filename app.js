@@ -29,12 +29,17 @@ function clicked() {
 function SendDiscord() {
     document.getElementById("SendButton").disabled = true;
 
+    var params = {
+        content: "random-person-cps: " + avargecps,
+        avatar_url:"https://doger123.github.io/Ankit-Cps/"
+    }
+
 var request = new XMLHttpRequest();
 request.open("POST", "https://discord.com/api/webhooks/809127464025718814/sX3uIo-9dVQ70jbMIkJwSJSILc-kr85aY6-PdBoU6647KwLLwbkfP1IThmf2Or8ZyOhz");
 
 request.setRequestHeader('Content-type', 'application/json');
 
-request.send(JSON.stringify("random-person-cps: " + avargecps));
+request.send(JSON.stringify(params));
 
 }
 
