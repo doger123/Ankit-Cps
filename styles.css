@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ADEFD1FF;
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    background-color: #00203FFF;
+    text-align: center;
+    font-weight: 150;
+    font-family: 'Roboto Mono', monospace;
+    padding: 5px;
+}
+
+a {
+    text-decoration: none;
+    border: 2px solid seashell;
+    border-radius: 20px;
+    padding: 5%;
+    background-color: rgb(231, 231, 231);
+    float: none;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 24px;
+    transition: 1s;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.button {
+    text-align: center;
+    margin-top: 20%;
+}
+
+
+
+h3 {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 34px;
+    font-family: 'Roboto Mono', monospace;
+    margin-top: 10%;
+}
+
+a:hover {
+    border: 5px solid seashell;
+}
+
