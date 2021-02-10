@@ -1,34 +1,45 @@
+var active = true
 var first = false
 var clicks = 0
-var cps = document.querySelector('.clicks')
+const cps = document.querySelector('.clicks')
 var avargecps = 0
+
 
 function clicked() {
     if (first === false) {
         clicks++;
         cps.innerHTML = clicks;
     }
+    if (active === true) {
+        setTimeout(() => {
+            avargecps = clicks/5
+            first = true
+            cps.innerHTML = avargecps + " CPS"
+    
+            document.getElementById("SendButton").disabled = false;
 
-    setTimeout(() => {
-        avargecps = clicks/5
-        first = true
-        cps.innerHTML = avargecps + " CPS"
+    
+    }, 5000);
+    }
+    active = false;
 
-        var params = {
-            content: "random-person-cps: " + avargecps
-          }
-
-          request.send(JSON.stringify(params));
-
-}, 5000);
 
 };
 
+function SendDiscord() {
+    document.getElementById("SendButton").disabled = true;
 
 var request = new XMLHttpRequest();
-request.open("POST", "https://discord.com/api/webhooks/809086710511566889/Pp_leAjGU5ecsWodZMu82NgX-araHPbm-FVtPOMjGKbAjnsUFK5-wz1Pofu9aFKrQCix");
+request.open("POST", "https://discord.com/api/webhooks/809127464025718814/sX3uIo-9dVQ70jbMIkJwSJSILc-kr85aY6-PdBoU6647KwLLwbkfP1IThmf2Or8ZyOhz");
 
 request.setRequestHeader('Content-type', 'application/json');
+
+request.send(JSON.stringify("random-person-cps: " + avargecps));
+
+}
+
+
+
 
 
 

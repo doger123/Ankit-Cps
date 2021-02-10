@@ -51,3 +51,23 @@ a:hover {
     border: 5px solid seashell;
 }
 
+a:active {
+    filter: brightness(60%);
+}
+
+.send-btn {
+    text-align: center;
+}
+
+button {
+    padding: 3px;
+}
+
+input {
+    padding: 3px;
+}
+
+div {
+    text-align: center;
+}
+
